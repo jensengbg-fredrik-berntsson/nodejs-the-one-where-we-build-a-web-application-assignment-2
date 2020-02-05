@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .wrapper {
   display: grid;
   margin: 0;
@@ -23,7 +24,8 @@ nav a {
   color: white;
 }
 main {
-  background-color: rgb(192, 190, 190);
+  background-color: rgb(236, 234, 234);
+  height: fit-content;
 }
 .showcase {
   background-image: url(../img/showcase.jpg);
@@ -39,11 +41,33 @@ main {
   color: white;
   font-size: 5rem;
   justify-content: center;
-  height: 50vh;
+  height: 70vh;
   position: relative;
   letter-spacing: 5px;
   align-items: center;
   text-decoration: underline;
+}
+
+.fa-chevron-down {
+  color: white;
+  text-align: center;
+  width: 100%;
+  bottom: 0.5rem;
+  position: absolute;
+  font-size: 2rem;
+}
+
+.collection {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Teko", sans-serif;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  bottom: 2rem;
+  position: absolute;
+
+  width: 100%;
 }
 
 .knifeimg {
@@ -54,7 +78,6 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 75vh;
   align-items: center;
   justify-content: space-evenly;
   margin: 2rem 10rem;

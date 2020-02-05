@@ -5,20 +5,10 @@ const {
   removeItem
 } = require("./database.js");
 const express = require("express");
-
 const app = express();
 
 app.use(express.static("public"));
 
-/* //Add new items-------------------------------------------
-const addNewProduct = async (name, price, imgurl) => {
-  const data = await database
-    .get("products")
-    .push({ name, price, imgurl })
-    .write();
-  return data;
-};
- */
 //Adding items to index.html
 app.post("/api/products", async (request, response) => {
   let message = {
