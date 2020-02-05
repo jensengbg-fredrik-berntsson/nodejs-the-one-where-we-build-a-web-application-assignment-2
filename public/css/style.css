@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: grid;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  width: 20%;
+  font-family: "Teko", sans-serif;
+}
+
+nav a {
+  text-decoration: underline;
+  color: white;
+}
+main {
+  background-color: rgb(192, 190, 190);
+}
+.showcase {
+  background-image: url(../img/showcase.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  justify-content: center;
+  background-attachment: fixed;
+}
+/* Home PAge */
+.title {
+  font-family: "Teko", sans-serif;
+  display: flex;
+  color: white;
+  font-size: 5rem;
+  justify-content: center;
+  height: 50vh;
+  position: relative;
+  letter-spacing: 5px;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.knifeimg {
+  max-height: 9rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 75vh;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 10rem;
+}
+
+.knifes {
+  min-width: 12rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 0px 10px -0px rgba(0, 0, 0, 0.75);
+  margin: 1rem;
+  background-color: white;
+  border-radius: 0.3rem;
+}
+.header {
+  text-align: center;
+  font-family: "Hind", sans-serif;
+}
+
+.price {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  font-family: "Hind", sans-serif;
+}
+
+.addbutton {
+  align-self: center;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 2px solid black;
+  outline: none;
+  font-family: "Hind", sans-serif;
+  transition: 0.5s;
+}
+.addbutton:hover {
+  transform: scale(1.2);
+}
+
+/* ------------------------------------- */
+
+/* Shopping cart */
+
+.carttitle {
+  display: flex;
+  color: white;
+  font-size: 5rem;
+  justify-content: center;
+  height: 20vh;
+  position: relative;
+  letter-spacing: 5px;
+  align-items: center;
+  text-decoration: underline;
+  font-family: "Teko", sans-serif;
+  margin-bottom: 2rem;
+}
+.incart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cartdiv {
+  display: grid;
+  grid-template-areas: "itemimg itemname itemprice itembutton";
+  grid-template-columns: 5rem 15rem 5rem 5rem;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  min-width: min-content;
+  width: 40vw;
+  padding: 0.5rem;
+  border: 0.5px solid black;
+}
+.cartheader {
+  font-size: 1.4rem;
+  grid-area: itemname;
+  font-family: "Hind", sans-serif;
+}
+.cartprice {
+  font-size: 1.2rem;
+  color: red;
+  grid-area: itemprice;
+  font-family: "Hind", sans-serif;
+}
+.cartimg {
+  max-height: 2rem;
+  grid-area: itemimg;
+}
+.removebutton {
+  grid-area: itembutton;
+  font-family: "Hind", sans-serif;
+  align-self: center;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 2px solid black;
+  outline: none;
+  font-family: "Hind", sans-serif;
+  transition: 0.5s;
+}
+.removebutton:hover {
+  transform: scale(1.1);
+}
+
+.totalprice {
+  display: flex;
+  justify-content: center;
+  font-family: "Hind", sans-serif;
+}
+#cost {
+  color: red;
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40vw;
+  padding: 0 2rem;
+  background-color: white;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 0.5px solid black;
+}
+
+.totalbutton {
+  align-self: center;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 2px solid black;
+  outline: none;
+  font-family: "Hind", sans-serif;
+}
