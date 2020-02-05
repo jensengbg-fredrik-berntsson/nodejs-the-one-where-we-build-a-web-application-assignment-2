@@ -3,11 +3,9 @@ import getCart from "./getCart.js";
 // Getting products from product list-------------------------------
 async function getproducts() {
   const url = "http://localhost:8000/api/products";
-
   let response = await fetch(url, { method: "GET" });
-  console.log(response);
   let object = await response.json();
-  console.log(object);
+
   return object;
 }
 // Getting item items from cart
@@ -23,7 +21,7 @@ async function changeButton(products) {
       const NAME = test.name;
       const buttontext = document.getElementById(NAME);
       buttontext.innerHTML = "In cart";
-      buttontext.disable = true;
+      buttontext.className = "newButton";
     }
   }
 }
@@ -73,6 +71,7 @@ async function addItem(name) {
   });
   const buttontext = document.getElementById(name);
   buttontext.innerHTML = "In cart";
+  buttontext.className = "newButton";
 }
 
 const findItem = e => {

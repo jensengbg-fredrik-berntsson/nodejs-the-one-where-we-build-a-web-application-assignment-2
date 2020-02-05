@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -17,6 +18,9 @@ nav {
   font-size: 2rem;
   width: 20%;
   font-family: "Teko", sans-serif;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
 }
 
 nav a {
@@ -24,50 +28,54 @@ nav a {
   color: white;
 }
 main {
-  background-color: rgb(236, 234, 234);
-  height: fit-content;
+  background-image: url(../img/food.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 .showcase {
   background-image: url(../img/showcase.jpg);
   background-repeat: no-repeat;
   height: 100vh;
+  display: flex;
   justify-content: center;
+  align-items: center;
   background-attachment: fixed;
 }
 /* Home PAge */
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .title {
   font-family: "Teko", sans-serif;
   display: flex;
   color: white;
   font-size: 5rem;
-  justify-content: center;
-  height: 70vh;
-  position: relative;
   letter-spacing: 5px;
-  align-items: center;
   text-decoration: underline;
 }
 
 .fa-chevron-down {
   color: white;
-  text-align: center;
-  width: 100%;
-  bottom: 0.5rem;
-  position: absolute;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .collection {
   color: white;
+  background-color: transparent;
+  padding: 0.5rem;
+  border: 2px solid white;
+  outline: none;
+  font-family: "Hind", sans-serif;
   font-size: 1.5rem;
-  text-align: center;
-  font-family: "Teko", sans-serif;
-  letter-spacing: 1px;
-  text-decoration: underline;
-  bottom: 2rem;
-  position: absolute;
-
-  width: 100%;
+  transition: 0.5s;
+}
+.collection:hover {
+  transform: scale(1.2);
 }
 
 .knifeimg {
@@ -84,8 +92,8 @@ main {
 }
 
 .knifes {
-  min-width: 12rem;
-  height: 18rem;
+  min-width: 15rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -119,11 +127,31 @@ main {
 .addbutton:hover {
   transform: scale(1.2);
 }
-
+.newButton {
+  align-self: center;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Hind", sans-serif;
+  color: rgb(27, 27, 27);
+}
 /* ------------------------------------- */
 
 /* Shopping cart */
 
+.showcase-cart {
+  background-image: url(../img/showcase.jpg);
+  background-repeat: no-repeat;
+  height: min-content;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  padding-bottom: 2rem;
+}
 .carttitle {
   display: flex;
   color: white;
@@ -135,24 +163,28 @@ main {
   align-items: center;
   text-decoration: underline;
   font-family: "Teko", sans-serif;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 .incart {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem 3rem;
+  background-color: white;
+  width: 35rem;
+  border-radius: 0.3rem;
 }
 .cartdiv {
   display: grid;
   grid-template-areas: "itemimg itemname itemprice itembutton";
   grid-template-columns: 5rem 15rem 5rem 5rem;
+  margin: 0.5rem 0;
   background-color: white;
   justify-content: center;
   align-items: center;
-  min-width: min-content;
-  width: 40vw;
+  width: 30rem;
   padding: 0.5rem;
-  border: 0.5px solid black;
+  border-bottom: 0.5px solid black;
 }
 .cartheader {
   font-size: 1.4rem;
@@ -164,6 +196,7 @@ main {
   color: red;
   grid-area: itemprice;
   font-family: "Hind", sans-serif;
+  font-weight: 700;
 }
 .cartimg {
   max-height: 2rem;
@@ -191,18 +224,21 @@ main {
 }
 #cost {
   color: red;
+  font-family: "Hind", sans-serif;
+  font-weight: 700;
 }
 .total {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 40vw;
-  padding: 0 2rem;
+  width: 35rem;
+  padding: 0 3rem;
   background-color: white;
   align-items: center;
-  margin-top: 1rem;
-  padding: 0.5rem;
-  border: 0.5px solid black;
+  margin-top: 0.5rem;
+  padding: 1rem 4rem;
+  font-family: "Hind", sans-serif;
+  border-radius: 0.3rem;
 }
 
 .totalbutton {
